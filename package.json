@@ -3,6 +3,9 @@
   "homepage": "https://www.yukstay.com",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "8.10.0"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-runtime": "^6.26.0",
