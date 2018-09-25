@@ -1,0 +1,52 @@
+/*--BELUM DI CHECK BAGIAN INI--*/
+
+h4{
+	font-size: 16px;
+	font-weight: 500;
+}
+
+p{
+	font-size: 15px;
+	line-height: 22px;
+}
+
+/*-------------------------------*/
+h2{
+	font-size: 30px;
+	font-family: $font-family-main-medium;
+}
+h3{
+	font-size: 25px;
+	&.h3-bold{
+		font-family: $font-family-main-medium;
+	}
+}
+
+
+.p1{
+	// font-family: $font-family-main;		//--Blocked cause, in body it's already been called
+	font-size: 16px;
+
+	&.p1-bold{
+		font-family: $font-family-main-medium;
+	}
+}
+
+.p2{
+	font-size: 14px;
+	&.p2-bold{
+		font-family: $font-family-main-medium;
+	}
+}
+.p3{
+	font-size: 12px;
+	&.p3-bold{
+		font-family: $font-family-main-medium;
+	}
+}
+.p4{
+	font-size: 10px;
+	&.p4-bold{
+		font-family: $font-family-main-medium;
+	}
+}

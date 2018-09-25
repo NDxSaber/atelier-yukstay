@@ -1,0 +1,7 @@
+.hover-zoom {
+	transform: scale(1);
+
+	&:hover {
+		transform: scale(1.15);
+	}
+}

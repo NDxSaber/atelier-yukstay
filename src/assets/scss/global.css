@@ -1,0 +1,215 @@
+/* fonts */
+@font-face {
+  font-family: 'PTSerif-Regular';
+  src: url("../fonts/PTSerif-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSerif-Regular.woff") format("woff"), url("../fonts/PTSerif-Regular.ttf") format("truetype"), url("../fonts/PTSerif-Regular.svg#PTSerif-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'PTSerif-Bold';
+  src: url("../fonts/PTSerif-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSerif-Bold.woff") format("woff"), url("../fonts/PTSerif-Bold.ttf") format("truetype"), url("../fonts/PTSerif-Bold.svg#PTSerif-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'SourceSansPro-Regular';
+  src: url("../fonts/SourceSansPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SourceSansPro-Regular.woff") format("woff"), url("../fonts/SourceSansPro-Regular.ttf") format("truetype"), url("../fonts/SourceSansPro-Regular.svg#SourceSansPro-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  overflow-x: hidden; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+  *:before, *:after {
+    box-sizing: border-box; }
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit; }
+  a:focus {
+    outline: none;
+    text-decoration: none;
+    color: inherit; }
+  a:hover {
+    outline: none;
+    text-decoration: none;
+    color: inherit; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: "SourceSansPro-Regular", Sans-serif;
+  font-size: 12px; }
+  body > section {
+    margin-bottom: 15px; }
+  body #root {
+    height: 100%; }
+    body #root #app {
+      height: 100%; }
+
+img {
+  max-width: 100%; }
+
+.container {
+  position: relative;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 800px; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@media all and (max-width: 990px) {
+  width: 100%; }
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit; }
+  a:focus {
+    outline: none;
+    text-decoration: none;
+    color: inherit; }
+  a:hover {
+    outline: none;
+    text-decoration: none;
+    color: inherit; }
+
+.desktop-only {
+  display: block !important; }
+
+.mobile-only {
+  display: none !important; }
+
+@media all and (max-width: 640px) {
+  .desktop-only {
+    display: none !important; }
+
+  .mobile-only {
+    display: block !important; } }
+.pos-relative {
+  position: relative; }
+
+.center {
+  text-align: center; }
+
+.right {
+  text-align: right; }
+
+.mirroringX {
+  transform: rotateY(180deg); }
+
+.column-count-3 {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3; }
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.home-page {
+  height: 100%; }
+  .home-page .picture-area {
+    width: 65%;
+    height: 100%;
+    float: left;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url("../images/background.png"); }
+  .home-page .sidebar-area {
+    width: 35%;
+    height: 100%;
+    float: left;
+    padding: 24px;
+    background: #FFFFFF; }
+    .home-page .sidebar-area .logo {
+      padding-top: 20%;
+      width: 142px;
+      margin-bottom: 32px; }
+    .home-page .sidebar-area .title {
+      margin-bottom: 10px;
+      font-family: "PTSerif-Bold", Sans-serif;
+      font-size: 30px;
+      color: #717171; }
+    .home-page .sidebar-area .subtitle {
+      margin-bottom: 76px;
+      font-family: "SourceSansPro-Regular", Sans-serif;
+      font-size: 16px;
+      color: #717171;
+      line-height: 24px; }
+    .home-page .sidebar-area label {
+      font-family: "SourceSansPro-Regular", Sans-serif;
+      font-size: 16px;
+      color: #717171;
+      line-height: 24px; }
+    .home-page .sidebar-area input[type='text'] {
+      width: 70%;
+      height: 48px;
+      padding: 14px;
+      border: 1px solid #ededed;
+      border-radius: 4px;
+      padding-right: 5px;
+      font-family: "SourceSansPro-Regular", Sans-serif;
+      font-size: 16px;
+      color: #717171; }
+    .home-page .sidebar-area button {
+      width: calc(100% - 5px);
+      height: 48px;
+      border: 1px solid #ededed;
+      border-radius: 4px;
+      font-family: "SourceSansPro-Regular", Sans-serif;
+      font-size: 16px;
+      color: #1278ce;
+      font-weight: bold; }
+
+/*# sourceMappingURL=global.css.map */
