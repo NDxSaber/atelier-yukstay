@@ -33,7 +33,7 @@ require('babel-register')({
     'syntax-dynamic-import',
     'dynamic-import-node',
     'react-loadable/babel'
-  ]
+  ] 
 });
 
 // Now that the nonsense is over... load up the server entry point
