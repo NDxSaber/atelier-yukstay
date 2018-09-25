@@ -1,9 +1,0 @@
-{
-  "API": {
-    "login": "http://yukstay-server.us-east-1.elasticbeanstalk.com/api/v2/auth/login",
-    "loginVerifyOTP": "http://yukstay-server.us-east-1.elasticbeanstalk.com/api/v2/auth/login/verify",
-    "ownerData": "http://yukstay-server.us-east-1.elasticbeanstalk.com/api/v2/owner",
-    "ownerContract": "http://yukstay-server.us-east-1.elasticbeanstalk.com/api/v2/owner/contract"
-  },
-  "mockData": true
-}

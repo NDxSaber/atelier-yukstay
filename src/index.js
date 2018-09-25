@@ -1,20 +1,29 @@
-import React from 'react';
-import { render, hydrate } from 'react-dom';
-import { Provider } from 'react-redux';
-import Loadable from 'react-loadable';
-import { Frontload } from 'react-frontload';
-import { ConnectedRouter } from 'connected-react-router';
-import createStore from './store';
+import React from "react";
+import { Component } from "react";
+import { render, hydrate } from "react-dom";
+import { Provider } from "react-redux";
+import Loadable from "react-loadable";
+import { Frontload } from "react-frontload";
+import { withRouter } from "react-router-dom";
+import { ConnectedRouter } from "connected-react-router";
+import createStore from "./store";
 
-//--ServiceWorker
-import registerServiceWorker from './registerServiceWorker';
+import App from "./app/app";
+import "./index.css";
 
-//--Global Style
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './assets/css/global.css';
+class ScrollToTop extends Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0);
+    }
+  }
 
-//--Pages
-import App from './App';
+  render() {
+    return this.props.children;
+  }
+}
+
+let Scroller = withRouter(ScrollToTop);
 
 // Create a store and get back itself and its history object
 const { store, history } = createStore();
@@ -23,17 +32,19 @@ const { store, history } = createStore();
 // Let's also let React Frontload explicitly know we're not rendering on the server here
 const Application = (
   <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <Frontload noServerRender>
-        <App />
-      </Frontload>
+    <ConnectedRouter history={history} onUpdate={() => window.scrollTo(0, 0)}>
+      <Scroller>
+        <Frontload noServerRender>
+          <App/>
+        </Frontload>
+      </Scroller>
     </ConnectedRouter>
   </Provider>
 );
 
-const root = document.querySelector('#root');
+const root = document.querySelector("#root");
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === "production") {
   // If we're running in production, we use hydrate to get fast page loads by just
   // attaching event listeners after the initial render
   Loadable.preloadReady().then(() => {
@@ -43,5 +54,3 @@ if (process.env.NODE_ENV === 'production') {
   // If we're not running on the server, just render like normal
   render(Application, root);
 }
-
-registerServiceWorker();

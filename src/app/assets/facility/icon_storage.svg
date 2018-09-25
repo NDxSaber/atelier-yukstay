@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-2{fill:#1278ce;stroke:#1278ce;stroke-width:.2px}
+        </style>
+    </defs>
+    <g id="icon_storage" transform="translate(-848 -2328)">
+        <path id="Rectangle_82" d="M0 0h40v40H0z" class="cls-1" data-name="Rectangle 82" transform="translate(848 2328)"/>
+        <g id="icon" transform="translate(857 2336)">
+            <path id="Path_96" d="M20.883 1H1.117A1.086 1.086 0 0 0 0 2.05v4.816a.356.356 0 0 0 .367.345H1.1v13.444a.356.356 0 0 0 .367.345h19.066a.356.356 0 0 0 .367-.345V7.21h.733A.356.356 0 0 0 22 6.866V2.05A1.086 1.086 0 0 0 20.883 1zm-.716 19.31H1.833v-1.034h18.334zm0-1.724H1.833V7.21h18.334zm1.1-12.066H.733V2.05a.373.373 0 0 1 .384-.361h19.766a.373.373 0 0 1 .384.361z" class="cls-2" data-name="Path 96"/>
+            <path id="Path_97" d="M15.367 30.517h10.266a.356.356 0 0 0 .367-.345v-4.827a.356.356 0 0 0-.367-.345H15.367a.356.356 0 0 0-.367.345v4.828a.356.356 0 0 0 .367.344zm.367-4.828h9.533v4.138h-9.534z" class="cls-2" data-name="Path 97" transform="translate(-9.5 -15.724)"/>
+            <path id="Path_98" d="M19.367 30.69h2.2a.345.345 0 1 0 0-.69h-2.2a.345.345 0 1 0 0 .69z" class="cls-2" data-name="Path 98" transform="translate(-12 -19)"/>
+            <path id="Path_100" d="M29.233 34h-5.866a.345.345 0 1 0 0 .69h5.867a.345.345 0 1 0 0-.69z" class="cls-2" data-name="Path 100" transform="translate(-16 -21.621)"/>
+        </g>
+    </g>
+</svg>

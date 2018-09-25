@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-2{fill:#1278ce}
+        </style>
+    </defs>
+    <g id="icon_healt" transform="translate(-448 -2216)">
+        <path id="Rectangle_72" d="M0 0h40v40H0z" class="cls-1" data-name="Rectangle 72" transform="translate(448 2216)"/>
+        <g id="hospital" transform="translate(457 2225)">
+            <path id="Path_217" d="M11 0a11 11 0 1 0 11 11A11.007 11.007 0 0 0 11 0zm0 21.046A10.046 10.046 0 1 1 21.046 11 10.057 10.057 0 0 1 11 21.046z" class="cls-2" data-name="Path 217"/>
+            <path id="Path_218" d="M84.328 76.217h-3.34v-3.34a.475.475 0 0 0-.477-.477h-3.817a.475.475 0 0 0-.477.477v3.34h-3.34a.475.475 0 0 0-.477.477v3.817a.475.475 0 0 0 .477.477h3.34v3.34a.475.475 0 0 0 .477.477h3.817a.475.475 0 0 0 .477-.477v-3.34h3.34a.475.475 0 0 0 .477-.477v-3.817a.512.512 0 0 0-.477-.477zm-.451 3.817h-3.366a.475.475 0 0 0-.477.477v3.34h-2.863v-3.34a.475.475 0 0 0-.477-.477h-3.34v-2.863h3.34a.475.475 0 0 0 .477-.477v-3.34h2.889v3.34a.475.475 0 0 0 .477.477h3.34z" class="cls-2" data-name="Path 218" transform="translate(-67.602 -67.602)"/>
+        </g>
+    </g>
+</svg>

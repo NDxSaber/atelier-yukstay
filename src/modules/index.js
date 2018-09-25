@@ -1,9 +1,15 @@
 import { combineReducers } from 'redux';
 
 import auth from './auth';
-import profile from './profile';
+import building from './building';
+import listing from './listing';
+import unit from './unit';
+import region from './region';
 
 export default combineReducers({
   auth,
-  profile
+  building,
+  listing,
+  unit,
+  region
 });

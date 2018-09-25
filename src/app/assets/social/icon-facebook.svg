@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-2{fill:#1278ce}
+        </style>
+    </defs>
+    <g id="icon_facebook" transform="translate(-64 -3931)">
+        <path id="Rectangle_55" d="M0 0h40v40H0z" class="cls-1" data-name="Rectangle 55" transform="translate(64 3931)"/>
+        <path id="icon_facebook-2" d="M77.09 12.782h2.631v10.831a.387.387 0 0 0 .387.387h4.461a.387.387 0 0 0 .387-.387v-10.78h3.024a.387.387 0 0 0 .385-.343l.459-3.99a.387.387 0 0 0-.384-.431h-3.484v-2.5c0-.753.406-1.136 1.206-1.136h2.278a.387.387 0 0 0 .387-.387V.39a.387.387 0 0 0-.388-.39h-3.283a6.015 6.015 0 0 0-3.933 1.483 4.125 4.125 0 0 0-1.372 3.666v2.923H77.09a.387.387 0 0 0-.387.387V12.4a.387.387 0 0 0 .387.382z" class="cls-2" data-name="icon_facebook" transform="translate(1.297 3939)"/>
+    </g>
+</svg>

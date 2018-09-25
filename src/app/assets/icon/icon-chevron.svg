@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-2{fill:#1278ce}
+        </style>
+    </defs>
+    <g id="icon_chevron" transform="translate(4 -41.907)">
+        <path id="Rectangle_88" d="M0 0h24v24H0z" class="cls-1" data-name="Rectangle 88" transform="translate(-4 41.907)"/>
+        <path id="icon" d="M11.42 48.907l-4.947 4.947-4.946-4.947L0 50.434l6.473 6.473 6.473-6.473z" class="cls-2" transform="translate(2 1)"/>
+    </g>
+</svg>
