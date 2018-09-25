@@ -6,38 +6,22 @@ import Loadable from 'react-loadable';
 
 import NotFound from './not-found';
 
-const Home = Loadable({
-  loader: () => import('./home'),
+const Homepage = Loadable({
+  loader: () => import(/* webpackChunkName: "homepage" */ './homepage'),
   loading: () => null,
-  modules: ['home']
+  modules: ['homepage']
 });
 
-const Search = Loadable({
-  loader: () => import('./search'),
+const About = Loadable({
+  loader: () => import(/* webpackChunkName: "about" */ './about'),
   loading: () => null,
-  modules: ['search']
+  modules: ['about']
 });
 
-const Detail = Loadable({
-  loader: () => import('./detail'),
+const Dashboard = Loadable({
+  loader: () => import(/* webpackChunkName: "dashboard" */ './dashboard'),
   loading: () => null,
-  modules: ['detail']
-});
-
-const Region = Loadable({
-  loader: () => {
-    return import('./region')
-  },
-  loading: () => null,
-  modules: ['region']
-});
-
-const Building = Loadable({
-  loader: () => {
-    return import('./bldg')
-  },
-  loading: () => null,
-  modules: ['building']
+  modules: ['dashboard']
 });
 
 const Login = Loadable({
@@ -52,27 +36,23 @@ const Logout = Loadable({
   modules: ['logout']
 });
 
-const Faq = Loadable({
-  loader: () => import(/* webpackChunkName: "faq" */ './faq'),
+const Profile = Loadable({
+  loader: () => import(/* webpackChunkName: "profile" */ './profile'),
   loading: () => null,
-  modules: ['faq']
+  modules: ['profile']
 });
-
 
 export default () => (
   <Switch>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/search" component={Search} />
-    <Route exact path="/b/:id/:roomid" component={Detail} />
+    <Route exact path="/" component={Homepage} />
+    <Route exact path="/about" component={About} />
 
-    <Route exact path='/b/:id' component={Building} />
-    <Route exact path='/r/:id' component={Region} />
+    <Route exact path="/profile/:id" component={Profile} />
+
+    <AuthenticatedRoute exact path="/dashboard" component={Dashboard} />
 
     <UnauthenticatedRoute exact path="/login" component={Login} />
     <AuthenticatedRoute exact path="/logout" component={Logout} />
-    <Route exact path="/faq" component={Faq} />
-    <Route exact path="/faq/:type" component={Faq} />
-    <Route exact path="/faq/:type/:id" component={Faq} />
 
     <Route component={NotFound} />
   </Switch>

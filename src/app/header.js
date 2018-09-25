@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
 const links = [
   {
     to: '/',
-    text: 'Home'
+    text: 'Homepage'
   },
   {
     to: '/about',
-    text: 'About Us'
+    text: 'About'
   },
   {
     to: '/profile/1',
@@ -18,6 +17,11 @@ const links = [
   {
     to: '/profile/2',
     text: 'Profile 2'
+  },
+  {
+    to: '/login',
+    text: 'Login',
+    auth: false
   },
   {
     to: '/dashboard',
@@ -32,25 +36,7 @@ const links = [
   {
     to: '/this-is-broken',
     text: 'Broken Page'
-  },
-  {
-    to: '/faq',
-    text: 'FAQ'
-  },
-  {
-    to: '/refer',
-    text: 'Refer & Earn'
-  },
-  {
-    to: '/login',
-    text: 'Login',
-    auth: false
-  },
-  {
-    to: '/register',
-    text: 'Register',
-    auth: true
-  },
+  }
 ];
 
 const isCurrent = (to, current) => {
@@ -71,6 +57,7 @@ const HeaderLink = ({ to, text, current }) => (
 
 export default ({ isAuthenticated, current }) => (
   <header id="header">
+    <h1 id="title">My awesome website</h1>
     <ul id="links">
       {links.map((link, index) => {
         const TheLink = <HeaderLink key={index} current={current} {...link} />;

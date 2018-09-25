@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import Helmet from 'react-helmet';
-import socialBg from '../../assets/yukstay-bg.jpg';
-import { buildProtocolUrl } from '../../helper'
+import logo from '../../assets/logo.jpg';
 
-import config from '../../config';
+const SITE_URL =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000'
+    : 'https://cra-ssr.herokuapp.com';
 
-const SITE_URL = buildProtocolUrl(config.site.URL);
+const FACEBOOK_APP_ID = 'XXXXXXXXX';
 
-const defaultTitle = 'YukStay';
+const defaultTitle = 'My Website';
 const defaultDescription =
-  'Cari kostan dan apartemen murah atau co-living? Tinggal di Co-living Jakarta, apartemen murah seharga kostan hanya di YukStay';
-const defaultKeywords = 'YukStay, co-living, info kos, cari kos, apartemen murah, sewa apartemen, cari apartemen, kamar kost, kostan, kos, co-living Indonesia, co-living Jakarta, info co-living.';
-const defaultImage = `${SITE_URL}${socialBg}`;
+  'This is a really awesome website where we can render on the server. Supa cool.';
+const defaultImage = `${SITE_URL}${logo}`;
+const defaultTwitter = '@cereallarceny';
 const defaultSep = ' | ';
 
 class Page extends Component {
@@ -20,7 +22,6 @@ class Page extends Component {
     {
       title,
       description,
-      keywords,
       image,
       contentType,
       twitter,
@@ -38,24 +39,26 @@ class Page extends Component {
     const theDescription = description
       ? description.substring(0, 155)
       : defaultDescription;
-      const theKeywords = keywords
-      ? keywords.substring(0, 155)
-      : defaultKeywords;
-    const theImage = image ? image : defaultImage;
+    const theImage = image ? `${SITE_URL}${image}` : defaultImage;
 
     const metaTags = [
       { itemprop: 'name', content: theTitle },
       { itemprop: 'description', content: theDescription },
       { itemprop: 'image', content: theImage },
       { name: 'description', content: theDescription },
-      { name: 'keywords', content: theKeywords },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: defaultTwitter },
+      { name: 'twitter:title', content: theTitle },
+      { name: 'twitter:description', content: theDescription },
+      { name: 'twitter:creator', content: twitter || defaultTwitter },
+      { name: 'twitter:image:src', content: theImage },
       { property: 'og:title', content: theTitle },
       { property: 'og:type', content: contentType || 'website' },
       { property: 'og:url', content: SITE_URL + pathname },
       { property: 'og:image', content: theImage },
       { property: 'og:description', content: theDescription },
       { property: 'og:site_name', content: defaultTitle },
-      // { property: 'fb:app_id', content: FACEBOOK_APP_ID }
+      { property: 'fb:app_id', content: FACEBOOK_APP_ID }
     ];
 
     if (noCrawl) {
@@ -90,7 +93,7 @@ class Page extends Component {
             itemtype: `http://schema.org/${rest.schema || 'WebPage'}`
           }}
           title={
-            rest.title ? rest.title : defaultTitle
+            rest.title ? rest.title + defaultSep + defaultTitle : defaultTitle
           }
           link={[
             {
