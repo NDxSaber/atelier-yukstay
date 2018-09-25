@@ -1,0 +1,67 @@
+/* Base for label styling */
+.checkbox-primary:not(:checked),
+.checkbox-primary:checked {
+    position: absolute;
+    left: -9999px;
+}
+.checkbox-primary:not(:checked) + label,
+.checkbox-primary:checked + label {
+    position: relative;
+    padding-left: $checkbox-primary-width + 5px;
+    cursor: pointer;
+}
+
+/* checkbox aspect */
+.checkbox-primary:not(:checked) + label:before,
+.checkbox-primary:checked + label:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: $checkbox-primary-width;
+    height: $checkbox-primary-height;
+    background: $color-white;
+    border-radius: $checkbox-primary-border-radius;
+    border: 1px solid $color-grey;
+}
+/* checked mark aspect */
+.checkbox-primary:not(:checked) + label:after,
+.checkbox-primary:checked + label:after {
+    content: '\2713';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    padding-top: 3px;
+    padding-left: 1px;
+    width: $checkbox-primary-width;
+    height: $checkbox-primary-height;
+    background: $color-orange;
+    border-radius: $checkbox-primary-border-radius;
+    transition: all .2s;
+    line-height: 12px;
+    font-size: 14px;
+    color: $color-white;
+    text-align: center;
+}
+/* checked mark aspect changes */
+.checkbox-primary:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+.checkbox-primary:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+/* disabled checkbox */
+.checkbox-primary:disabled:not(:checked) + label:before,
+.checkbox-primary:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+.checkbox-primary:disabled:checked + label:after {
+    color: #999;
+}
+.checkbox-primary:disabled + label {
+    color: #aaa;
+}

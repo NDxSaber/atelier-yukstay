@@ -6,8 +6,15 @@ import { Frontload } from 'react-frontload';
 import { ConnectedRouter } from 'connected-react-router';
 import createStore from './store';
 
-import App from './app/app';
-import './index.css';
+//--ServiceWorker
+import registerServiceWorker from './registerServiceWorker';
+
+//--Global Style
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/css/global.css';
+
+//--Pages
+import App from './App';
 
 // Create a store and get back itself and its history object
 const { store, history } = createStore();
@@ -36,3 +43,5 @@ if (process.env.NODE_ENV === 'production') {
   // If we're not running on the server, just render like normal
   render(Application, root);
 }
+
+registerServiceWorker();

@@ -1,0 +1,59 @@
+.animation{
+	transition: all 0.3s ease;
+}
+
+.fade-enter {
+	opacity: 0.01;
+	&.fade-enter-active {
+		opacity: 1;
+		transition: opacity 500ms ease-in;
+	}
+}
+
+.fade-leave {
+	opacity: 1;
+	&.fade-leave-active {
+		opacity: 0.01;
+		transition: opacity 300ms ease-in;
+	}
+}
+
+.slide-up-enter{
+	opacity: 0.1;
+	top: -284px;
+	&.slide-up-enter-active {
+		opacity: 1;
+		top: 0;
+		transition: 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	}
+}
+
+.slide-up-leave{
+	opacity: 1;
+	top: 0;
+	&.slide-up-leave-active {
+		opacity: 0;
+		top: -84px;
+		transition: 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	}
+}
+
+.slide-down-enter{
+	opacity: 0.1;
+	bottom: -50px;
+	&.slide-down-enter-active {
+		opacity: 1;
+		bottom: 0;
+		transition: 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	}
+}
+
+.slide-down-leave{
+	opacity: 1;
+	bottom: 0;
+	&.slide-down-leave-active {
+		opacity: 0;
+		bottom: -50px;
+		transition: 0.3s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	}
+}
