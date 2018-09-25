@@ -3,6 +3,9 @@
   "homepage": "https://cra-ssr.herokuapp.com",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "8.10.0"
+  },
   "dependencies": {
     "connected-react-router": "^4.3.0",
     "cookie-parser": "^1.4.3",
