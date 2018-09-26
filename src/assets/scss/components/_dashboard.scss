@@ -1,0 +1,344 @@
+.dashboard-wrapper {
+
+	//-- Navbar
+	.navbar {
+
+		&.top-navbar-dash {
+			background-color: $color-white !important;
+			box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+			border: solid 1px #ededed;
+
+			.navbar-nav {
+				.nav-item {
+					font-size: 16px;
+
+					.nav-link {
+						color: $color-blue;
+					}
+				}
+			}
+		}
+	}
+
+	//-- Header Info
+	.header-info {
+		padding: 35px 15px;
+
+		.account-info {
+			font-size: 18px;
+			line-height: 1.28;
+			color: $color-warm-grey;
+			font-family: $font-family-main;
+			margin: 0;
+
+			.icon-user {
+				width: 40px;
+				vertical-align: middle;
+				margin-right: 15px;
+			}
+		}
+
+		.partnership-info {
+			line-height: 1.28;
+			text-align: right;
+			font-size: 18px;
+			color: $color-warm-grey;
+			font-family: $font-family-main;
+			margin: 0;
+
+			.agreement {
+				color: $color-blue;
+				margin-bottom: 15px;
+				cursor: pointer;
+
+				.icon-pdf {
+					width: 24px;
+					vertical-align: middle;
+					margin-right: 8px;
+				}
+
+				span {
+					text-decoration: underline;
+				}
+			}
+
+			.viewing {
+				cursor: pointer;
+			}
+
+
+		}
+	}
+
+	//-- Table Content
+	.table-content {
+		padding: 15px;
+
+		.table {
+
+			thead {
+
+				&.head-top {
+
+					th,
+					td {
+						padding: 1.25rem;
+						background-color: $color-smooth-grey;
+						color: $color-warm-grey;
+						font-size: 14px;
+						text-align: center;
+						font-family: $font-family-main-bold;
+						border-bottom: none;
+						border-top: none;
+						border-right: 1px solid $color-white;
+
+						&:last-child {
+							border-right: none;
+						}
+					}
+				}
+
+			}
+
+			tbody {
+				&.space {
+					border-top: none;
+
+					td {
+						border-top: none;
+						padding: 10px 0;
+					}
+				}
+
+				&.tb-collapse {
+					cursor: pointer;
+					border: solid 1px $color-smooth-blue;
+
+					td {
+						background-color: $color-smooth-blue;
+						border-top: none;
+						padding: 18px 16px;
+						font-family: $font-family-main-bold;
+
+
+						.label {
+							color: $color-warm-grey;
+							font-size: 16px;
+							text-align: left;
+						}
+
+						.icon {
+							float: right;
+
+							&:after {
+								content: url(../images/icon_chevron_up.svg);
+								position: absolute;
+								transform: rotate(0);
+								width: 24px;
+								right: 25px;
+							}
+
+							&.up {
+								&:after {
+									content: url(../images/icon_chevron_up.svg);
+									position: absolute;
+									transform: rotate(180deg);
+									width: 24px;
+									right: 25px;
+								}
+							}
+						}
+					}
+				}
+
+				&.tb-content {
+					border: solid 1px $color-smooth-blue;
+
+					tr {
+						background-color: $color-milk;
+
+						td {
+							border-top: none;
+							font-size: 16px;
+							color: $color-warm-grey;
+							text-align: left;
+							padding: 18px 16px;
+
+							&.icon {
+								cursor: pointer;
+								text-align: center;
+
+								img {
+									width: 24px;
+
+									&.checked {
+										width: 16px;
+									}
+
+									&.pdf {
+										width: 24px;
+									}
+								}
+							}
+						}
+
+						&:nth-of-type(odd) {
+							background-color: $color-white;
+						}
+					}
+
+					&.hide {
+						display: none;
+					}
+
+				}
+			}
+		}
+	}
+
+	//-- Base Popup
+	.base-popup {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 115%;
+		left: 0;
+		z-index: 10;
+		will-change: transform;
+		transition: transform .5s, -webkit-transform .5s;
+		-webkit-transition: -webkit-transform .5s;
+
+		&.show {
+			transform: translateY(-115%);
+			-o-transform: translateY(-115%);
+			-moz-transform: translateY(-115%);
+			-webkit-transform: translateY(-115%);
+
+			&:before {
+				background: rgba(0, 0, 0, .7);
+				transition: background .2s ease-in;
+				transition-delay: .5s;
+			}
+		}
+
+		&:before {
+			content: ' ';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background: 0 0;
+			box-sizing: border-box;
+		}
+
+		&.fade-in {
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity .3s;
+
+			&.show {
+				opacity: 1;
+				pointer-events: auto;
+
+				&:before {
+					background: rgba(0, 0, 0, .7);
+					transition: background .1s ease-in;
+					transition-delay: 0s;
+				}
+			}
+		}
+	}
+
+	//-- Docusign
+	.docusign-wrapper {
+		position: relative;
+		background-color: $color-white;
+		margin: 15% auto;
+		width: 50%;
+
+		.docusign-body {
+			padding: 55px 40px;
+
+			.icon-docusign {
+				width: 40px;
+				margin-bottom: 10px;
+			}
+
+			h2 {
+				font-size: 30px;
+				font-family: $font-family-secondary-bold;
+				margin: 0 0 8px 0;
+				line-height: 1.33;
+				color: $color-warm-grey
+			}
+
+			p {
+				font-size: 16px;
+				color: $color-warm-grey;
+				line-height: 1.5;
+				margin: 0 0 15px 0;
+
+			}
+
+			.action {
+				margin: 5px 0;
+
+				.btn {
+					font-size: 14px;
+					padding: 10px 20px;
+
+					&.btn-primary {
+						background: $color-soft-blue;
+						opacity: 0.8;
+						color: $color-blue;
+					}
+
+					&.btn-primary-outline {
+						background: $color-white;
+						border: solid 1px $color-soft-grey;
+						color: $color-warm-grey;
+					}
+
+					&:last-child {
+						margin-left: 8px;
+					}
+				}
+			}
+		}
+	}
+
+	//-- Viewing
+	.viewing-wrapper {
+		position: relative;
+		background-color: $color-white;
+		margin: 15% auto;
+		width: 70%;
+
+		.viewing-body {
+			padding: 25px;
+
+			h3 {
+				font-size: 18px;
+				font-family: $font-family-secondary-bold;
+				margin: 0 0 8px 0;
+				line-height: 1.33;
+				color: $color-warm-grey
+			}
+
+			
+		}
+	}
+
+	.close {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+
+		img {
+			width: 24px;
+		}
+	}
+}

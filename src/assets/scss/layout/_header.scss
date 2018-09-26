@@ -1,0 +1,22 @@
+.header{
+	min-height: 55px;
+	text-align: center;
+
+	img {
+		margin-top:10px;
+		margin-bottom:10px;
+		height: 60px;
+	}
+	
+
+	.logo {
+		width: 120px;
+		margin-bottom: 30px;
+	}
+}
+
+@media all and (max-width: 640px){
+header{
+}
+
+}

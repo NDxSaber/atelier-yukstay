@@ -1,0 +1,35 @@
+.btn-primary {
+    display: inline-block;
+    background: $color-orange;
+    padding: 10px 15px;
+    border: 1px solid $color-orange;
+    border-radius: 4px;
+    font-family: $font-family-regular;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: #fff;
+    padding: 8px 13px;
+    border: 1px solid $color-orange;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: $font-family-regular;
+    font-size: 16px;
+    color: $color-orange;
+    text-align: center;
+
+    &:hover {
+        background-color: $color-orange;
+        color: $color-white;
+        text-decoration: none;
+    }
+    &:focus {
+        background-color: $color-orange;
+        color: $color-white;
+        text-decoration: none;
+    }
+}
