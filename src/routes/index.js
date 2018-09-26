@@ -25,7 +25,7 @@ const Dashboard = Loadable({
 });
 
 const Login = Loadable({
-  loader: () => import(/* webpackChunkName: "login" */ './login'),
+  loader: () => import(/* webpackChunkName: "login" */ './Login'),
   loading: () => null,
   modules: ['login']
 });

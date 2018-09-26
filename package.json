@@ -13,6 +13,7 @@
     "cookie-parser": "^1.4.3",
     "forcedomain": "^1.0.0",
     "ignore-styles": "^5.0.1",
+    "isomorphic-cookie": "^1.2.4",
     "js-cookie": "^2.2.0",
     "lodash": "^4.17.11",
     "md5-file": "^4.0.0",
