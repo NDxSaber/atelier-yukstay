@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import get from 'lodash/get';
-import hellosign from 'hellosign-embedded';
+// import hellosign from 'hellosign-embedded';
 
 import config from '../../config';
 import {OwnerContractMockData, OwnerDataMockData} from '../../mockData';
@@ -34,10 +34,13 @@ class Dashboard extends Component {
       this.processInvalidCreds();
 		}
 
-		this.initHelloSign();
+		this.hellosign = null;
   }
 	
 	componentDidMount() {
+		this.hellosign = require('hellosign-embedded');
+		this.initHelloSign();
+		
 		this.doGetOwnerData();
 		this.doGetOwnerContract();
 	}
@@ -45,7 +48,7 @@ class Dashboard extends Component {
 	initHelloSign = () => {
 		const CLIENT_ID = 'e8bef94dd5a2e23cf4e32bfd9de4fd4a';
 
-		hellosign.init(CLIENT_ID);
+		this.hellosign.init(CLIENT_ID);
 	}
 
   doGetOwnerData = () => {
@@ -149,7 +152,7 @@ class Dashboard extends Component {
 	};
 
 	onHandleProceedSigning = () => {
-		hellosign.open({
+		this.hellosign.open({
 			url: 'https://app.hellosign.com/editor/embeddedSign?signature_id=4e6104e12e939051a4441badb8341985&token=b24f6e86f507d29d52286d618e95a911',
 			allowCancel: true,
 			debug: true,

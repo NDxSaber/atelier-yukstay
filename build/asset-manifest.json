@@ -1,10 +1,12 @@
 {
-  "Login.js": "static/js/Login.5083f583.chunk.js",
-  "Login.js.map": "static/js/Login.5083f583.chunk.js.map",
+  "Dashboard.js": "static/js/Dashboard.0db75eca.chunk.js",
+  "Dashboard.js.map": "static/js/Dashboard.0db75eca.chunk.js.map",
+  "Login.js": "static/js/Login.cf36094f.chunk.js",
+  "Login.js.map": "static/js/Login.cf36094f.chunk.js.map",
   "main.css": "static/css/main.5d7990d3.css",
   "main.css.map": "static/css/main.5d7990d3.css.map",
-  "main.js": "static/js/main.08263975.js",
-  "main.js.map": "static/js/main.08263975.js.map",
+  "main.js": "static/js/main.7bd3f296.js",
+  "main.js.map": "static/js/main.7bd3f296.js.map",
   "static/media/PTSerif-Bold.eot": "static/media/PTSerif-Bold.6d521ef7.eot",
   "static/media/PTSerif-Bold.svg": "static/media/PTSerif-Bold.107beb4d.svg",
   "static/media/PTSerif-Bold.ttf": "static/media/PTSerif-Bold.4b61d02c.ttf",
@@ -23,7 +25,12 @@
   "static/media/SourceSansPro-SemiBold.woff": "static/media/SourceSansPro-SemiBold.d481a151.woff",
   "static/media/arvidsson.jpg": "static/media/arvidsson.4d6f8e0d.jpg",
   "static/media/background.png": "static/media/background.db779bca.png",
+  "static/media/checked.svg": "static/media/checked.96f78676.svg",
+  "static/media/iconClose.svg": "static/media/iconClose.ac602e8b.svg",
   "static/media/icon_chevron_up.svg": "static/media/icon_chevron_up.745f6296.svg",
+  "static/media/icon_contract.svg": "static/media/icon_contract.ad16d9d5.svg",
   "static/media/logo_yukstay.svg": "static/media/logo_yukstay.105d0386.svg",
-  "static/media/pekka.jpg": "static/media/pekka.1eab475c.jpg"
+  "static/media/pdf.svg": "static/media/pdf.e3ec9746.svg",
+  "static/media/pekka.jpg": "static/media/pekka.1eab475c.jpg",
+  "static/media/user.svg": "static/media/user.7a21cbe9.svg"
 }

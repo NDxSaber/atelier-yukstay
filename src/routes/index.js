@@ -4,11 +4,11 @@ import Loadable from 'react-loadable';
 
 import NotFound from './NotFound';
 
-// const Dashboard = Loadable({
-//   loader: () => import(/* webpackChunkName: "dashboard" */ './dashboard'),
-//   loading: () => null,
-//   modules: ['dashboard']
-// });
+const Dashboard = Loadable({
+  loader: () => import(/* webpackChunkName: "Dashboard" */ './Dashboard'),
+  loading: () => null,
+  modules: ['Dashboard']
+});
 
 const Login = Loadable({
   loader: () => import(/* webpackChunkName: "Login" */ './Login'),
@@ -19,8 +19,7 @@ const Login = Loadable({
 export default () => (
   <Switch>
     <Route exact path="/" component={Login} />
-    {/* <AuthenticatedRoute exact path="/dashboard" component={Dashboard} /> */}
-
+    <Route exact path="/dashboard" component={Dashboard} />
     <Route component={NotFound} />
   </Switch>
 );
