@@ -7,7 +7,7 @@ import Page from '../../components/page';
 import {
   getCurrentProfile,
   removeCurrentProfile
-} from '../../../modules/profile';
+} from '../../modules/profile';
 
 const frontload = async props =>
   await props.getCurrentProfile(+props.match.params.id);

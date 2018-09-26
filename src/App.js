@@ -8,8 +8,8 @@ import { withRouter } from 'react-router';
 import { establishCurrentUser } from './modules/auth';
 import { isServer } from './store';
 
-import Header from './app/header';
-import Routes from './app/routes';
+import Header from './Header';
+import Routes from './routes';
 
 class App extends Component {
   componentWillMount() {

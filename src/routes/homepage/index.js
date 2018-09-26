@@ -1,7 +1,7 @@
 import React from 'react';
 import Page from '../../components/page';
 
-import logo from '../../assets/logo.jpg';
+import logo from '../../assets/images/logo.jpg';
 
 export default () => (
   <Page id="homepage">
