@@ -11,7 +11,7 @@ import { isServer } from './store';
 import Header from './header';
 import Routes from './routes';
 
-import './assets/css/global.css';
+import './assets/scss/global.css';
 
 class App extends Component {
   componentWillMount() {
@@ -23,13 +23,13 @@ class App extends Component {
   render() {
     return (
       <div id="app">
-        <Header
+        {/* <Header
           isAuthenticated={this.props.isAuthenticated}
           current={this.props.location.pathname}
-        />
-        <div id="content">
+        /> */}
+        {/* <div id="content"> */}
           <Routes />
-        </div>
+        {/* </div> */}
       </div>
     );
   }
