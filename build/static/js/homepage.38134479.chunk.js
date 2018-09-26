@@ -1,2 +1,0 @@
-webpackJsonp([3],{130:function(e,a,t){"use strict";Object.defineProperty(a,"__esModule",{value:!0});var l=t(0),n=t.n(l),r=t(44),c=t(47),o=t.n(c);a.default=function(){return n.a.createElement(r.a,{id:"homepage"},n.a.createElement("p",null,"Here's our homepage. All are welcome."),n.a.createElement("img",{src:o.a,alt:"Homepage",style:{width:"400px"}}))}}});
-//# sourceMappingURL=homepage.38134479.chunk.js.map

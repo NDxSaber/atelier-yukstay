@@ -24,11 +24,11 @@ const Dashboard = Loadable({
   modules: ['dashboard']
 });
 
-const Login = Loadable({
-  loader: () => import(/* webpackChunkName: "login" */ './Login'),
-  loading: () => null,
-  modules: ['login']
-});
+// const Login = Loadable({
+//   loader: () => import(/* webpackChunkName: "login" */ './Login'),
+//   loading: () => null,
+//   modules: ['login']
+// });
 
 const Logout = Loadable({
   loader: () => import(/* webpackChunkName: "logout" */ './logout'),
@@ -51,7 +51,7 @@ export default () => (
 
     <AuthenticatedRoute exact path="/dashboard" component={Dashboard} />
 
-    <UnauthenticatedRoute exact path="/login" component={Login} />
+    {/* <UnauthenticatedRoute exact path="/login" component={Login} /> */}
     <AuthenticatedRoute exact path="/logout" component={Logout} />
 
     <Route component={NotFound} />
