@@ -8,7 +8,6 @@ import { withRouter } from 'react-router';
 import { establishCurrentUser } from './modules/auth';
 import { isServer } from './store';
 
-import Header from './Header';
 import Routes from './routes';
 
 class App extends Component {
@@ -21,13 +20,7 @@ class App extends Component {
   render() {
     return (
       <div id="app">
-        <Header
-          isAuthenticated={this.props.isAuthenticated}
-          current={this.props.location.pathname}
-        />
-        <div id="content">
-          <Routes />
-        </div>
+        <Routes />
       </div>
     );
   }
