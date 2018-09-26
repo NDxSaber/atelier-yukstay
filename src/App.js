@@ -5,13 +5,11 @@ import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router';
 
 // Action creators and helpers
-import { establishCurrentUser } from '../modules/auth';
-import { isServer } from '../store';
+import { establishCurrentUser } from './modules/auth';
+import { isServer } from './store';
 
-import Header from './header';
-import Routes from './routes';
-
-import './app.css';
+import Header from './app/header';
+import Routes from './app/routes';
 
 class App extends Component {
   componentWillMount() {
