@@ -19,7 +19,7 @@ const links = [
     text: 'Profile 2'
   },
   {
-    to: '/Login',
+    to: '/login',
     text: 'Login',
     auth: false
   },
