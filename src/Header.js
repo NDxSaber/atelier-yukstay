@@ -18,11 +18,11 @@ const links = [
     to: '/profile/2',
     text: 'Profile 2'
   },
-  // {
-  //   to: '/login',
-  //   text: 'Login',
-  //   auth: false
-  // },
+  {
+    to: '/login',
+    text: 'Login',
+    auth: false
+  },
   {
     to: '/dashboard',
     text: 'Dashboard',
