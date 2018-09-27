@@ -9,6 +9,9 @@ import logo from '../../assets/images/logo_yukstay.svg';
 
 import Auth from '../../helper/auth'
 
+import { loginUser } from '../../modules/auth';
+
+import DotArea from './components/DotArea';
 
 class Login extends Component {
 	constructor(props) {
@@ -123,13 +126,15 @@ class Login extends Component {
 	 */
 	onHandleClickButtonGetOTP = () => {
 		const { phone } = this.state;
+		const { loginUser } = this.props;
 		const setState = {};
 
 		setState.errorMessage = this.doValidating(phone);
 		
 		this.setState(setState, () => {
 			if (setState.errorMessage === '') {
-				this.onHandleSubmitGetOTP();
+				loginUser();
+				// this.onHandleSubmitGetOTP();
 			}
 		});
 	}
@@ -244,10 +249,7 @@ class Login extends Component {
 						</div>
 					</div>
 
-					<div className="dot-area">
-						<div className={`dot ${currentShow !== 'verify' ? 'current' : ''}`} />
-						<div className={`dot ${currentShow === 'verify' ? 'current' : ''}`} />
-					</div>
+					<DotArea currentShow={ currentShow === 'verify' ? true : false } />
 				</div>
 			</div>
 		);
@@ -255,3 +257,15 @@ class Login extends Component {
 }
 
 export default Login;
+// const mapStateToProps = state => ({
+// });
+
+// const mapDispatchToProps = dispatch =>
+// 	bindActionCreators({
+// 		loginUser
+// 	}, dispatch);
+
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(Login);
