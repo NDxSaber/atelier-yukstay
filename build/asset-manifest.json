@@ -1,12 +1,12 @@
 {
-  "Dashboard.js": "static/js/Dashboard.0db75eca.chunk.js",
-  "Dashboard.js.map": "static/js/Dashboard.0db75eca.chunk.js.map",
-  "Login.js": "static/js/Login.f57dcd96.chunk.js",
-  "Login.js.map": "static/js/Login.f57dcd96.chunk.js.map",
+  "Dashboard.js": "static/js/Dashboard.0dd11da2.chunk.js",
+  "Dashboard.js.map": "static/js/Dashboard.0dd11da2.chunk.js.map",
+  "Login.js": "static/js/Login.3231ceca.chunk.js",
+  "Login.js.map": "static/js/Login.3231ceca.chunk.js.map",
   "main.css": "static/css/main.5d7990d3.css",
   "main.css.map": "static/css/main.5d7990d3.css.map",
-  "main.js": "static/js/main.d01b7065.js",
-  "main.js.map": "static/js/main.d01b7065.js.map",
+  "main.js": "static/js/main.e594d413.js",
+  "main.js.map": "static/js/main.e594d413.js.map",
   "static/media/PTSerif-Bold.eot": "static/media/PTSerif-Bold.6d521ef7.eot",
   "static/media/PTSerif-Bold.svg": "static/media/PTSerif-Bold.107beb4d.svg",
   "static/media/PTSerif-Bold.ttf": "static/media/PTSerif-Bold.4b61d02c.ttf",
@@ -23,7 +23,6 @@
   "static/media/SourceSansPro-SemiBold.svg": "static/media/SourceSansPro-SemiBold.d4aec154.svg",
   "static/media/SourceSansPro-SemiBold.ttf": "static/media/SourceSansPro-SemiBold.774c05cc.ttf",
   "static/media/SourceSansPro-SemiBold.woff": "static/media/SourceSansPro-SemiBold.d481a151.woff",
-  "static/media/arvidsson.jpg": "static/media/arvidsson.4d6f8e0d.jpg",
   "static/media/background.png": "static/media/background.db779bca.png",
   "static/media/checked.svg": "static/media/checked.96f78676.svg",
   "static/media/iconClose.svg": "static/media/iconClose.ac602e8b.svg",
@@ -31,6 +30,5 @@
   "static/media/icon_contract.svg": "static/media/icon_contract.ad16d9d5.svg",
   "static/media/logo_yukstay.svg": "static/media/logo_yukstay.105d0386.svg",
   "static/media/pdf.svg": "static/media/pdf.e3ec9746.svg",
-  "static/media/pekka.jpg": "static/media/pekka.1eab475c.jpg",
   "static/media/user.svg": "static/media/user.7a21cbe9.svg"
 }

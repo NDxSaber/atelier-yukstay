@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import config from '../../config';
 // import langID from '../../lang/id.json';
@@ -38,6 +40,9 @@ class Login extends Component {
 	 */
 	componentDidMount() {
 		// this.fetch();
+	}
+
+	componentDidUpdate() {
 	}
 
 
@@ -205,15 +210,15 @@ class Login extends Component {
 
 		return (
 			<div className="home-page clearfix">
-				<div className="picture-area"></div>
+				{/* <div className="picture-area"></div> */}
 				<div className="sidebar-area">
-					<img className="logo" src={logo} alt="logo-yukstay" />
+					{/* <img className="logo" src={logo} alt="logo-yukstay" /> */}
 					
 					<div className="box-form-area">
 						{/* --- Login Form Area --- */}
 						<div className={`login-form-area ${currentShow !== 'verify' ? 'show' : ''}`}>
-							<div className="title">{langEN.homePage.title}</div>
-							<div className="subtitle">{langEN.homePage.subtitle}</div>
+							{/* <div className="title">{langEN.homePage.title}</div>
+							<div className="subtitle">{langEN.homePage.subtitle}</div> */}
 
 							<div className="login-form">
 								<form onSubmit={this.onHandleSubmitGetOTP}>
@@ -256,16 +261,17 @@ class Login extends Component {
 	}
 }
 
-export default Login;
-// const mapStateToProps = state => ({
-// });
+// export default Login;
+const mapStateToProps = state => ({
+	test: state.auth
+});
 
-// const mapDispatchToProps = dispatch =>
-// 	bindActionCreators({
-// 		loginUser
-// 	}, dispatch);
+const mapDispatchToProps = dispatch =>
+	bindActionCreators({
+		loginUser
+	}, dispatch);
 
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(Login);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login);
