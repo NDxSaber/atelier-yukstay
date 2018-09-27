@@ -1,0 +1,68 @@
+.button-primary{
+	display: inline-block;
+	background: $color-orange;
+	padding: 10px 15px;
+	border: 1px solid $color-orange;
+	cursor: pointer;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+
+	&:hover{
+		background: $color-orange-hover;
+		border-color: $color-orange-hover; 
+		color: #fff;
+		text-decoration: none;
+	}
+	&:focus{
+		color: #fff;
+		text-decoration: none;
+	}
+
+	&.ghost-primary {
+		background: transparent;
+		color: $color-orange;
+		border-color: $color-orange;
+
+		&:hover{
+			background: $color-orange;
+			border-color: $color-orange; 
+			color: #fff;
+		}
+	}
+}
+
+.button-secondary{
+	background: #fff;
+	padding: 8px 13px;
+	border: 1px solid $color-orange;
+	cursor: pointer;
+	border-radius: 4px;
+	color: $color-orange;
+	font-size: 16px;
+	text-align: center;
+
+	&:hover{
+		background-color: $color-orange;
+		color: $color-white;
+		text-decoration: none;
+	}
+	&:focus{
+		background-color: $color-orange;
+		color: $color-white;
+		text-decoration: none;
+	}
+}
+
+.button-link {
+    color: $color-orange;
+    font-size: 16px;
+    padding-bottom: 2px;
+    border-bottom: solid 1px $color-orange;
+}
+
+// share button in KAI
+.wrap-share .share img {
+	margin-bottom: -8px;
+}

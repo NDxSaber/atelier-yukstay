@@ -1,0 +1,51 @@
+.paging{
+	font-size: 16px;
+  	font-weight: bold;
+  	text-align: center;
+  	margin-bottom: 60px;
+
+  	//--REAL ONE
+	ul{
+		-webkit-padding-start: 0px;
+		li{
+			display: inline-block;
+			padding: 4px 10px;
+			&.active{
+				border-radius: 50%;
+				background-color: $color-orange;
+				color: $color-white;
+			}
+			&.next{
+				color: $color-grey-darker;
+				font-size: 12px;
+				span{
+					color: $color-grey-darkest;
+				}
+			}			
+		}
+	}
+
+
+	//--JSPAGES
+	>a{
+		cursor:pointer;
+		display:inline-block;
+		padding: 4px 10px;
+
+		&.jp-next{}
+		&.jp-previous{}
+		&.jp-disabled{
+			color: $color-grey-darker;
+		}
+		&.jp-current{
+			border-radius: 50%;
+			background-color: $color-orange;
+			color: $color-white;
+		}
+	}
+	>span{
+		cursor:pointer;
+		display:inline-block;
+		.jp-hidden{}
+	}
+}

@@ -1,0 +1,26 @@
+.pos-relative{
+    position:relative;
+}
+
+.center{
+	text-align: center;
+}
+.right{
+	text-align: right;	
+}
+
+.mirroringX{
+	transform: rotateY(180deg);
+}
+
+.column-count-3{
+	-webkit-column-count: 3; 
+	-moz-column-count: 3; 
+	column-count: 3;
+}
+
+.ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

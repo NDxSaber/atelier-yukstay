@@ -1,0 +1,95 @@
+/* This is temporary for menu main setting */
+.radio-primary-div {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid $color-grey;
+    border-radius: 50%;
+    position: relative;
+
+    &.checked:after {
+        content: ' ';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 6px;
+        height: 6px;
+        background: $color-orange;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+
+    &.checked:before {
+        content: ' ';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: 16px;
+        height: 16px;
+        border: 2px solid $color-orange;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+}
+
+/* Base for label styling */
+.radio-primary:not(:checked),
+.radio-primary:checked {
+    position: absolute;
+    left: -9999px;
+}
+.radio-primary:not(:checked) + label,
+.radio-primary:checked + label {
+    position: relative;
+    padding-left: 16px + 5px;
+    cursor: pointer;
+}
+
+/* radio aspect */
+.radio-primary:not(:checked) + label:before,
+.radio-primary:checked + label:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: $color-white;
+    border-radius: 50%;
+    border: 1px solid $color-grey;
+}
+/* checked mark aspect */
+.radio-primary:not(:checked) + label:after,
+.radio-primary:checked + label:after {
+    content: '\2713';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: $color-orange;
+    border-radius: 50%;
+    line-height: 12px;
+    font-size: 12px;
+    text-align: center;
+}
+/* checked mark aspect changes */
+.radio-primary:not(:checked) + label:after {
+    opacity: 0;
+}
+.radio-primary:checked + label:after {
+    opacity: 1;
+}
+/* disabled radio */
+.radio-primary:disabled:not(:checked) + label:before,
+.radio-primary:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+.radio-primary:disabled:checked + label:after {
+    color: #999;
+}
+.radio-primary:disabled + label {
+    color: #aaa;
+}
