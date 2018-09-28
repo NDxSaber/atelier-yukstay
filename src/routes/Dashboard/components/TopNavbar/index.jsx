@@ -67,10 +67,7 @@ class TopNavbar extends Component {
                                     </DropdownToggle>
                                     <DropdownMenu right>
                                         <DropdownItem>
-                                            Option 1
-                                        </DropdownItem>
-                                        <DropdownItem>
-                                            Option 2
+                                            No Have Notification!
                                         </DropdownItem>
                                     </DropdownMenu>
                                 </UncontrolledDropdown>

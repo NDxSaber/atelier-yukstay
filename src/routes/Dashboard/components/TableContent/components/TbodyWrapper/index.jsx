@@ -21,8 +21,6 @@ class TbodyWrapper extends Component {
 
   handleCollapse () {
     
-    console.log(this.state);
-    
   }
 
 	render() {

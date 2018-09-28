@@ -5,7 +5,7 @@
 
 		&.top-navbar-dash {
 			background-color: $color-white !important;
-			box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+			box-shadow: 0 3px 6px 0 rgba(237, 237, 237, 0.16);
 			border: solid 1px #ededed;
 
 			.navbar-nav {
@@ -39,7 +39,7 @@
 		}
 
 		.partnership-info {
-			line-height: 1.28;
+			line-height: 1.5;
 			text-align: right;
 			font-size: 18px;
 			color: $color-warm-grey;
@@ -48,7 +48,7 @@
 
 			.agreement {
 				color: $color-blue;
-				margin-bottom: 15px;
+				margin-bottom: 25px;
 				cursor: pointer;
 
 				.icon-pdf {
@@ -215,7 +215,7 @@
 			-webkit-transform: translateY(-115%);
 
 			&:before {
-				background: rgba(0, 0, 0, .7);
+				background: rgba(237, 237, 237, .9);
 				transition: background .2s ease-in;
 				transition-delay: .5s;
 			}
@@ -244,7 +244,7 @@
 				pointer-events: auto;
 
 				&:before {
-					background: rgba(0, 0, 0, .7);
+					background: rgba(237, 237, 237, .9);
 					transition: background .1s ease-in;
 					transition-delay: 0s;
 				}
@@ -328,7 +328,64 @@
 				color: $color-warm-grey
 			}
 
-			
+			.nav-tabs {
+				border-bottom: none;
+			}
+
+			.tabs-content {
+				margin-top: 25px;
+
+				.table-list {
+						thead {
+							th,
+							td {
+								padding: 1.25rem;
+								background-color: $color-smooth-blue;
+								color: $color-warm-grey;
+								font-size: 14px;
+								text-align: left;
+								font-family: $font-family-main-bold;
+								border-bottom: none;
+								border-top: none;
+								border-right: 1px solid $color-white;
+
+								&:last-child {
+									border-right: none;
+								}
+							}
+						}
+
+						tbody {
+
+							tr {
+								background-color: $color-milk;
+
+								td {
+									border-top: none;
+									font-size: 16px;
+									color: $color-warm-grey;
+									text-align: left;
+									padding: 18px 16px;
+								}
+
+								&:nth-of-type(odd) {
+									background-color: $color-white;
+								}
+							}
+						}
+				}
+
+				.graphic {
+					margin-top: 35px;
+					text-align: center;
+
+					h4 {
+						font-family: $font-family-secondary-bold;
+						font-size: 28px;
+						color: $color-warm-grey;
+					}
+				}
+			}
 		}
 	}
 

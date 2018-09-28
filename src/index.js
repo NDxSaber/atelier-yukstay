@@ -7,6 +7,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import createStore from './store';
 
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/scss/global.css';
 
 // Create a store and get back itself and its history object

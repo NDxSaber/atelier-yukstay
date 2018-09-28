@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 import get from 'lodash/get';
 // import hellosign from 'hellosign-embedded';
 
 import config from '../../config';
-import {OwnerContractMockData, OwnerDataMockData} from '../../mockData';
+import { OwnerContractMockData, OwnerDataMockData } from '../../mockData';
 import TopNavbar from './components/TopNavbar';
 import HeaderInfo from './components/HeaderInfo';
 import TableContent from './components/TableContent';
@@ -16,27 +16,27 @@ import Auth from '../../helper/auth'
 
 class Dashboard extends Component {
 	constructor(props) {
-    super(props);
+		super(props);
 
-    this.state = {
-      APIOwnerData: OwnerDataMockData,
-      APIOwnerContract: OwnerContractMockData,
-      isLogin: false,
-      loadedOwner: false,
-      loadingOwner: false,
-      loadedContract: false,
-      loadingContract: false,
-      popupDocusign: true,
+		this.state = {
+			APIOwnerData: OwnerDataMockData,
+			APIOwnerContract: OwnerContractMockData,
+			isLogin: false,
+			loadedOwner: false,
+			loadingOwner: false,
+			loadedContract: false,
+			loadingContract: false,
+			popupDocusign: true,
 			popupViewing: false
-    };
+		};
 
-    if(!Auth.isLoggedIn()) {
-      this.processInvalidCreds();
+		if (!Auth.isLoggedIn()) {
+			this.processInvalidCreds();
 		}
 
-		this.hellosign = null;
-  }
-	
+		this.initHelloSign();
+	}
+
 	componentDidMount() {
 		this.hellosign = require('hellosign-embedded');
 		this.initHelloSign();
@@ -51,37 +51,37 @@ class Dashboard extends Component {
 		this.hellosign.init(CLIENT_ID);
 	}
 
-  doGetOwnerData = () => {
-    if (config.mockData) {
-      this.processResponseOwnerData({ data: OwnerDataMockData });
-    } else {
-      this.setState({
-        loadingOwner: true
-      }, () => {
-        axios({
-          method: 'GET',
-          url: config.API.ownerData,
-          data: '',
-          headers: {
-            'Authorization': Auth.getAuthorizationHeader(),
-          },
-        })
-          .then((response) => {
-            if (response.data.statusCode === 401) {
-              return this.processInvalidCreds();
-            }
+	doGetOwnerData = () => {
+		if (config.mockData) {
+			this.processResponseOwnerData({ data: OwnerDataMockData });
+		} else {
+			this.setState({
+				loadingOwner: true
+			}, () => {
+				axios({
+					method: 'GET',
+					url: config.API.ownerData,
+					data: '',
+					headers: {
+						'Authorization': Auth.getAuthorizationHeader(),
+					},
+				})
+					.then((response) => {
+						if (response.data.statusCode === 401) {
+							return this.processInvalidCreds();
+						}
 
-            this.setState({loadingOwner: false, loadedOwner: true}, () => {
-              this.processResponseOwnerData(response);
-            });
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      });
-    }
+						this.setState({ loadingOwner: false, loadedOwner: true }, () => {
+							this.processResponseOwnerData(response);
+						});
+					})
+					.catch((error) => {
+						console.log(error);
+					});
+			});
+		}
 	}
-	
+
 	doGetOwnerContract = () => {
 		if (config.mockData) {
 			this.processResponseOwnerContract({ data: OwnerContractMockData });
@@ -101,8 +101,8 @@ class Dashboard extends Component {
 					if (response.data.statusCode === 401) {
 						return this.processInvalidCreds();
 					}
-	
-					this.setState({loadingContract: false, loadedContract: true}, () => {
+
+					this.setState({ loadingContract: false, loadedContract: true }, () => {
 						this.processResponseOwnerContract(response);
 					});
 				}).catch((error) => {
@@ -111,7 +111,7 @@ class Dashboard extends Component {
 			});
 		}
 	}
-	
+
 	processInvalidCreds = response => {
 		Auth.logout();
 
@@ -126,23 +126,23 @@ class Dashboard extends Component {
 		this.setState(setState);
 	}
 
-  processResponseOwnerContract = response => {
-    const setState = {};
+	processResponseOwnerContract = response => {
+		const setState = {};
 
-    setState.APIOwnerContract = response.data;
+		setState.APIOwnerContract = response.data;
 
-    //--Checking Whether Return Error or Success
-    // if (response.data.statusCode === 500) {
-    // 	const setState = {};
+		//--Checking Whether Return Error or Success
+		if (response.data.statusCode === 500) {
+			const setState = {};
 
-    // 	setState.errorMessageOTP = response.data.error.message;
-    // } else {
+			setState.errorMessageOTP = response.data.error.message;
+		} else {
 
-    // }
+		}
 
-    this.setState(setState);
-  }
-	
+		this.setState(setState);
+	}
+
 	handleDocusign = () => {
 		this.setState(prevState => ({ popupDocusign: !prevState.popupDocusign }));
 	};
@@ -189,10 +189,10 @@ class Dashboard extends Component {
 							</BasePopup>
 						</React.Fragment>
 					) : (
-						<BasePopup showPopup={true} animation="fade-in" >
-							<Docusign onHandleCancelled={this.handleDocusign} onHandleProceed={this.onHandleProceedSigning} />
-						</BasePopup>
-					)
+							<BasePopup showPopup={true} animation="fade-in" >
+								<Docusign onHandleCancelled={this.handleDocusign} onHandleProceed={this.onHandleProceedSigning} />
+							</BasePopup>
+						)
 				}
 			</div>
 		);

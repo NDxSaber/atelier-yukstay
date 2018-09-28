@@ -8,7 +8,7 @@ const tbodyCollapse = props => {
     return (
         <tbody className="tb-collapse" onClick={() => onHandleCollapse()}>
             <tr>
-                <td colSpan={colspan}>
+                <td colSpan={colspan} className="text-left">
                     <span className="label">{name}</span>
                     <span className={classnames('icon', { up: !collapse })} />
                 </td>

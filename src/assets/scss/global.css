@@ -298,7 +298,7 @@ a {
 
 .dashboard-wrapper .navbar.top-navbar-dash {
   background-color: #FFFFFF !important;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px 0 rgba(237, 237, 237, 0.16);
   border: solid 1px #ededed; }
   .dashboard-wrapper .navbar.top-navbar-dash .navbar-nav .nav-item {
     font-size: 16px; }
@@ -318,7 +318,7 @@ a {
       vertical-align: middle;
       margin-right: 15px; }
   .dashboard-wrapper .header-info .partnership-info {
-    line-height: 1.28;
+    line-height: 1.5;
     text-align: right;
     font-size: 18px;
     color: #717171;
@@ -326,7 +326,7 @@ a {
     margin: 0; }
     .dashboard-wrapper .header-info .partnership-info .agreement {
       color: #1278ce;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
       cursor: pointer; }
       .dashboard-wrapper .header-info .partnership-info .agreement .icon-pdf {
         width: 24px;
@@ -424,7 +424,7 @@ a {
     -moz-transform: translateY(-115%);
     -webkit-transform: translateY(-115%); }
     .dashboard-wrapper .base-popup.show:before {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(237, 237, 237, 0.9);
       transition: background .2s ease-in;
       transition-delay: .5s; }
   .dashboard-wrapper .base-popup:before {
@@ -446,7 +446,7 @@ a {
       opacity: 1;
       pointer-events: auto; }
       .dashboard-wrapper .base-popup.fade-in.show:before {
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(237, 237, 237, 0.9);
         transition: background .1s ease-in;
         transition-delay: 0s; }
 
@@ -500,6 +500,41 @@ a {
       margin: 0 0 8px 0;
       line-height: 1.33;
       color: #717171; }
+    .dashboard-wrapper .viewing-wrapper .viewing-body .nav-tabs {
+      border-bottom: none; }
+    .dashboard-wrapper .viewing-wrapper .viewing-body .tabs-content {
+      margin-top: 25px; }
+      .dashboard-wrapper .viewing-wrapper .viewing-body .tabs-content .table-list thead th,
+      .dashboard-wrapper .viewing-wrapper .viewing-body .tabs-content .table-list thead td {
+        padding: 1.25rem;
+        background-color: #e6eef4;
+        color: #717171;
+        font-size: 14px;
+        text-align: left;
+        font-family: "SourceSansPro-SemiBold", Sans-serif;
+        border-bottom: none;
+        border-top: none;
+        border-right: 1px solid #FFFFFF; }
+        .dashboard-wrapper .viewing-wrapper .viewing-body .tabs-content .table-list thead th:last-child,
+        .dashboard-wrapper .viewing-wrapper .viewing-body .tabs-content .table-list thead td:last-child {
+          border-right: none; }
+      .dashboard-wrapper .viewing-wrapper .viewing-body .tabs-content .table-list tbody tr {
+        background-color: #fdfdfd; }
+        .dashboard-wrapper .viewing-wrapper .viewing-body .tabs-content .table-list tbody tr td {
+          border-top: none;
+          font-size: 16px;
+          color: #717171;
+          text-align: left;
+          padding: 18px 16px; }
+        .dashboard-wrapper .viewing-wrapper .viewing-body .tabs-content .table-list tbody tr:nth-of-type(odd) {
+          background-color: #FFFFFF; }
+      .dashboard-wrapper .viewing-wrapper .viewing-body .tabs-content .graphic {
+        margin-top: 35px;
+        text-align: center; }
+        .dashboard-wrapper .viewing-wrapper .viewing-body .tabs-content .graphic h4 {
+          font-family: "PTSerif-Bold", Sans-serif;
+          font-size: 28px;
+          color: #717171; }
 
 .dashboard-wrapper .close {
   position: absolute;

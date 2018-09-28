@@ -32,18 +32,19 @@ class headerInfo extends Component {
 				<Container fluid>
 					<Row>
 						<Col sm="12" md="6">
-							<p className="account-info">
+							<p className="account-info text-left">
 								<img src={userIcon} alt="icon-user" className="icon-user" />
 								Hi {name}, welcome back!
               </p>
 						</Col>
 						<Col sm="12" md="6">
 							<div className="partnership-info">
-								<p className="agreement" onClick={() => this.handleContract()}>
+								<span className="agreement" onClick={() => this.handleContract()}>
 									<img src={pdfIcon} alt="icon-pdf" className="icon-pdf" />
 									<span>Partnership Agreement</span>
-								</p>
-								<p className="viewing" onClick={() => onHandleViewing()}>Total active listing: {totalView}</p>
+								</span>
+								<br/>
+								<span className="viewing" onClick={() => onHandleViewing()}>Total active listing: {totalView}</span>
 							</div>
 						</Col>
 					</Row>
